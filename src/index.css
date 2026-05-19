@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Cairo", ui-sans-serif, system-ui, sans-serif;
+  --font-arabic: "Cairo", sans-serif;
+  
+  --color-brand: #00C853;
+  --color-brand-dark: #007E33;
+  --color-brand-light: #69F0AE;
+  
+  --color-background: #0A0A0F;
+  --color-surface: #141420;
+  --color-card: #1E1E2E;
+  --color-accent: #FFD600;
+  --color-danger: #FF1744;
+  
+  --radius-xs: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-white font-sans;
+    direction: rtl;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Custom scrollbar for dark theme */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-brand/20 rounded-full hover:bg-brand/40 transition-colors;
+  }
+}
+
+.font-arabic {
+  font-family: var(--font-arabic);
+}
+
+/* Animations helpers */
+.safe-paddding-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}

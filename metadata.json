@@ -1,0 +1,8 @@
+{
+  "name": "Remix: نجوم الكرة",
+  "description": "تطبيق إدارة فرق كرة القدم - توزيع عادل، دردشة حية، وإحصائيات متقدمة",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
